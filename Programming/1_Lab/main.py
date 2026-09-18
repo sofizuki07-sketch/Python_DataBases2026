@@ -89,7 +89,7 @@ def two_sum_hashed_2(lst:list[int], target:int) -> None | tuple[int, int]:
 
 def two_sum_all(lst: list[int], target: int) -> None | list[tuple[int, int]]:
     """
-    Функция записывает все пары индексов (без повторов индексов) в список кортежей, начиная с минимальных.
+    Функция записывает все пары индексов в список кортежей, начиная с минимальных.
 
     Используется словарь с ключами-значениями num и значениями-списком индексов i
 
@@ -110,21 +110,23 @@ def two_sum_all(lst: list[int], target: int) -> None | list[tuple[int, int]]:
     #     if len(res) > 0: return res
     # return None
 
-    if len(lst) > 1:
-        hashed = {}
-        for i, num in enumerate(lst): # создаём словарь из списков индексов с одинаковыми значениями
-            if num not in hashed:
-                hashed[num] = []
-            hashed[num].append(i)
+     if len(lst) <= 1:
+        return None
 
-        res = []
-        for i in range(len(lst)):
-            comp = target - lst[i]
-            if comp in hashed and i < hashed[comp][0]: # выбор без повторного использования элемента (из-за <)
-                res.append((i, hashed[comp][0])) # добавляем элемент-кортеж из индексов в список
+    hashed = {} # Словарь со структурой: значение -> список индексов, где оно встречается
+    for i, num in enumerate(lst):
+        if num not in hashed:
+            hashed[num] = []
+        hashed[num].append(i)
 
-        if len(res) > 0:
-            return res
+    res = []
+    for i in range(len(lst)):
+        comp = target - lst[i]
+        if comp in hashed:
+            for j in hashed[comp]: # Это точно меньше O(n**2), т.к. кол-во j меньше len(lst)
+                if j > i:  # чтобы не дублировать пары и не использовать один индекс дважды
+                    res.append((i, j))
+
+    if len(res) > 0:
+        return res
     return None
-
-print(two_sum_all([1, 2, 3, 4, 5, 6, 7, 8, 9], 8))
