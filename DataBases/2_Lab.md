@@ -7,6 +7,7 @@
 
 ### Задание 1
 Созданная БД first_model и схема к ней:
+
 ![](img/Lab_2/FirstModel.png)
 
 Cсылка на скрипт: https://clck.ru/3VvQ9V 
@@ -36,7 +37,8 @@ ENGINE = InnoDB;
 ```
 ### Задание 2
 Созданная БД shop_model и схема к ней:
-![](img/Lab2/ShopModel.png)
+
+![](img/Lab_2/shop_model.png)
 
 Ссылка на полный скрипт: https://clck.ru/3VvUPQ 
 
@@ -75,7 +77,9 @@ ENGINE = InnoDB;
 ```
 ### Задание 3
 
-
+![в режиме диаграммы используем функцию](img/Lab_2/1.png)
+![продолжение экспорта](img/Lab_2/2.png)
+![результат на сервере](img/Lab_2/3.png)
 
 ### Задание 4
 
