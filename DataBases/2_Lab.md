@@ -102,5 +102,7 @@ products
 При редактировании orders выдаёт ошибку:
 ![](img/Lab_2/error_orders.png)
 
+При редактировании deliveries выдаёт тоже ошибку:
+![](img/Lab_2/error_deliveries.png)
 
 ### Выполнила: Жукова СР 2обПОО
