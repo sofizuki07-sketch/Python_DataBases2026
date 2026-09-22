@@ -82,6 +82,18 @@ ENGINE = InnoDB;
 ![результат на сервере](img/Lab_2/3.png)
 
 ### Задание 4
+Получилось добавить данные во все таблицы, кроме orders и deliveries (последнюю пришлось даже удалить и заново попробовать заполнить...)
+
+users
+![](img/Lab_2/)
+settings
+![](img/Lab_2/)
+shops
+![](img/Lab_2/)
+product_type
+![](img/Lab_2/)
+products
+![](img/Lab_2/)
 
 
 
