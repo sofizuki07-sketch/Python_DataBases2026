@@ -86,12 +86,16 @@ ENGINE = InnoDB;
 
 users
 ![](img/Lab_2/users.png)
+
 settings
 ![](img/Lab_2/settings.png)
+
 shops
 ![](img/Lab_2/shops.png)
+
 product_type
 ![](img/Lab_2/product_type.png)
+
 products
 ![](img/Lab_2/products.png)
 
