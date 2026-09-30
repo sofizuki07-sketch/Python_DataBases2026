@@ -107,8 +107,7 @@ def gen_bin_tree(root: int = 5, height: int = 6, left_branch_f: Callable[[int], 
                 for item in s:
                     r.append(item)
 
-        leaves = list(map(
-            lambda root_value: [left_branch_f(root_value), right_branch_f(root_value)], r))
+        leaves = list(map(lambda root_value: [left_branch_f(root_value), right_branch_f(root_value)], r))
         roots.append(leaves)
 
     # print(f"Корни:  {roots}")
@@ -117,26 +116,28 @@ def gen_bin_tree(root: int = 5, height: int = 6, left_branch_f: Callable[[int], 
     tree = []
     for i, leaf in enumerate(roots):
         if i == 0:
-            leaves_dict = [{str(item): []} for item in leaf]
+            leaves_dict = [ {str(item): []} for item in leaf ]
         else:
-            leaves_dict = [
-                [{str(s[0]): []}, {str(s[1]): []}]
-                for s in leaf
-            ]
+            leaves_dict = [ [{str(s[0]): []}, {str(s[1]): []}] for s in leaf ]
         tree.append(leaves_dict)
 
     # 3) Значения уровней в виде перечисления всех значений в нём (слева направо)
     values = [[str(v) for v in roots[0]]]
     for level in roots[1:]:
-        values.append([str(v) for pair in level for v in pair])
+        values.append([ str(v) for pair in level for v in pair  ])
 
     # 4) Снизу вверх собираем вложенное дерево через zip и map
     subtrees = list(map(lambda v: {v: []}, values[-1]))
     for i in range(len(values) - 2, -1, -1):
         children_pairs = list(zip(subtrees[::2], subtrees[1::2])) # обирает в пары левого и правого потомка
-        subtrees = list(map(lambda v, pair: {v: [pair[0], pair[1]]}, values[i], children_pairs))
+        subtrees = list(map(lambda v, pair: {v: [pair[0], pair[1]]}, values[i], children_pairs)) # собирает потомков под узел v в словарь
 
     # 5) Возвращаем корень со всеми вложенными уровнями-потомками
     return subtrees[0]
+
+
+
+
+```
 
 ```
