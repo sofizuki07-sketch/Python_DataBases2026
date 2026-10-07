@@ -1,4 +1,4 @@
-from Lab_5 import load_params, calculate
+from Lab_3 import load_params, calculate
 import unittest
 import configparser
 from pathlib import Path
