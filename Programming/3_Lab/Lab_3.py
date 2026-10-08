@@ -7,13 +7,13 @@ def calculate(op1: int | float, op2: int | float, epsilon: float = 0.0001) -> fl
 
     :param int | float op1: операнд 1 (делимое)
     :param int | float op2: операнд 2 (делитель)
-    :param float epsilon: точность вычислений
+    :param float epsilon: точность вычислений (=0.0001 по умолчанию)
     :return: кортеж из результата вычислений с необходимой точностью и кол-во знаков после запятой в точности
 
     >>> calculate(10, 3, 0.1)
-    (3.3, 1)
+    3.3
     """
-    power = int(fabs(log10(epsilon))) # необходимое кол-во цифр после запятой
+    power = len(str(epsilon).split('.')[1]) # необходимое кол-во цифр после запятой
     return round((op1/op2), power)
 
 
@@ -34,9 +34,9 @@ def load_params(path=None):
 
     return config.getfloat('DEFAULT', 'epsilon')
 
-if __name__ == '__main__':
-    eps = load_params()
-    print(calculate(10, 3, eps))
+    
+eps = load_params()
+print(calculate(10, 3, eps))    
 
 
 
