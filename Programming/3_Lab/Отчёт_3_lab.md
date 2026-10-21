@@ -126,7 +126,7 @@ def load_params(path: str | Path | None = None, section: str = "DEFAULT", option
 ```
 
 *********
-Полное решение в файле [Lab_5.py](Lab_5.py)
+Полное решение в файле [Lab_3.py](Lab_3.py)
 
 ### Тестирование:
 Тесты в файле [tests_division.py](tests_division.py)
