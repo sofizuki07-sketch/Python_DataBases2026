@@ -26,3 +26,29 @@
 
 ## Работа с ветвями
 
+![](img/branches(1).png)
+
+![](img/branches(12).png)
+
+![](img/branches(11).png)
+
+![](img/branches(10).png)
+
+![](img/branches(9).png)
+
+![](img/branches(8).png)
+
+![](img/branches(7).png)
+
+![](img/branches(6).png)
+
+![](img/branches(5).png)
+
+![](img/branches(4).png)
+
+![](img/branches(3).png)
+
+![](img/branches(2).png)
+
+
+
