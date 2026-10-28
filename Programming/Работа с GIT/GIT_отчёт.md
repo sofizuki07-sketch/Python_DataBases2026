@@ -18,9 +18,9 @@
 
 ## Операции над файлами и связь с origin
 
-![](img/add-notes(2).png)
-
 ![](img/add-notes(1).png)
+
+![](img/add-notes(2).png)
 
 ## Возвращение удалённых элементов
 
