@@ -26,22 +26,22 @@
 ## Возвращение удалённых элементов
 Изменение файла readme (строка) и пуш в origin, затем работа с папкой
 **Изменение файла**
-![](diff-readme(4).png)
+![](img/diff-readme(4).png)
 
-![](diff-readme(3).png)
+![](img/diff-readme(3).png)
 
-![](diff-readme(2).png)
+![](img/diff-readme(2).png)
 
-![](diff-readme(1).png)
+![](img/diff-readme(1).png)
 
 **Создание и удаление папки**
-![](cr-folder(1).png)
+![](img/cr-folder(1).png)
 
-![](cr-folder(2).png)
+![](img/cr-folder(2).png)
 
-![](cr-folder(3).png)
+![](img/cr-folder(3).png)
 
-![](cr-folder(4).png)
+![](img/cr-folder(4).png)
 
 ## Работа с ветвями
 Создание побочной ветви, сохранение там файла, перенос(дублирование) содержимого на главную ветвь и удаление побочной.
